@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="createuser.css">
+    </head>
+    <body>
+        <div class="nvgbar">
+            <div class="userinfo">
+                <div class="userphoto">
+                    <img class="photo"
+                        src="https://www.w3schools.com/howto/img_avatar.png"
+                        alt="userphoto">
+                    <h2 class="username">Test Name</h2>
+                </div>
+            </div>
+            <div class="logout">
+                <a href="login.html">
+                    <button class="button">Log out</button>
+                </a>
+            </div>
+            <div class="creteuser_box">
+                <div>
+                    <div class="userinfo">
+                        <div class="userphoto">
+                            <img class="photo2"
+                                src="https://www.w3schools.com/howto/img_avatar.png"
+                                alt="userphoto">
+                            <h2 class="username2">Test Name</h2>
+                            <h2 class="email">test@gmail.com</h2>
+                            <button class="buttonCreate" id="create01"
+                                onclick="register()">Create</button>
+                        </div>
+                    </div>
+                    <div class="input">
+                        <input id="username" type="text" class="username_text"
+                            placeholder="User Name" required>
+                        <br>
+                        <input id="password" type="password"
+                            class="username_pass"
+                            placeholder="password" required>
+                        <br>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </body>
+
+        <script>
+
+            var users = [
+            {
+                username: "test",
+                password: "test"
+            }
+            ];
+          function register(){
+          var username = document.getElementById('username').value;
+          var password = document.getElementById('password').value;
+          
+  users.push({
+   username: username,
+   password: password
+ })
+ window.location.href = "homepage.html";
+
+}
+  </script>
+    </html>

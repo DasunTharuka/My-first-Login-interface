@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="login.css">
+    </head>
+    <body>
+
+        <div class="nvgbar"></div>
+
+        <div class="main">
+
+            <form method="get" class="form__1">
+                <div class="login">
+                    <h1 class="login">Login</h1>
+                </div>
+                <div class="blank"></div>
+
+                <div class="input">
+                    <input id="username01" type="text" placeholder="User Name"
+                        required> <br>
+                    <input id="passowrd01" type="password"
+                        placeholder="Password" required> <br>
+                    <button class="button" id="login01" onclick="login()">Login</button>
+                </div>
+
+
+            </form>
+
+        </div>
+
+
+
+    </body>
+
+    <script>
+        const users= [
+            {
+                username: "test",
+                password: "test"
+            },
+            {
+                username: "test2",
+                password: "test2"
+            }
+        ]
+        
+        var x;
+        var y;
+
+      
+
+
+
+        function login(){
+            x = document.getElementById("username01").value;
+            y = document.getElementById("passowrd01").value;
+            for (let i = 0; i < users.length; i++) {
+                if (x == users[i].username && y == users[i].password) {
+                    window.location.href = "homepage.html";
+                    alert("Login Successful");
+                    break;
+                }    
+            }
+
+            
+        }
+        window.alert("Incorrect login details. Please try again.");
+        
+    </script>
+</html>
